@@ -1,0 +1,50 @@
+openapi: "3.0.0"
+info:
+  version: 0.1
+  title: Find eat price
+  description: side project
+  contact:
+    name: "damody"
+    url: "https://www.facebook.com/Remake.AON/"
+    email: "t1238142000@gmail.com"
+  license:
+    name: MIT
+    url: http://opensource.org/licenses/MIT
+servers:
+  - url: http://127.0.0.1:8000/
+paths:
+  /restaurants:
+    $ref: /paths/restaurants/edit.yaml
+  /restaurants/search:
+    $ref: /paths/restaurants/search.yaml
+  /restaurants/{restaurantId}:
+    $ref: /paths/restaurants/get.yaml
+  /restaurants/like:
+    $ref: /paths/restaurants/like.yaml
+
+  /foods:
+    $ref: /paths/foods/edit.yaml
+  /foods/search:
+    $ref: /paths/foods/search.yaml
+  /foods/{foodId}:
+    $ref: /paths/foods/get.yaml
+  /foods/{foodId}/comments:
+    $ref: /paths/foods/comments.yaml
+  /foods/like:
+    $ref: /paths/foods/like.yaml
+  
+  /members:
+    $ref: /paths/members/edit.yaml
+  /members/{membersId}:
+    $ref: /paths/members/get.yaml
+  /members/{membersId}/comments:
+    $ref: /paths/members/comments.yaml
+  
+  /comments:
+    $ref: /paths/comments/edit.yaml
+  /comments/{commentsId}:
+    $ref: /paths/comments/get.yaml
+  /comments/like:
+    $ref: /paths/comments/like.yaml
+  /comments/array:
+    $ref: /paths/comments/array.yaml
