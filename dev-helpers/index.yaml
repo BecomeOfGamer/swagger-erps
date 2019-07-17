@@ -1,7 +1,7 @@
 openapi: "3.0.0"
 info:
   version: 0.2
-  title: elo rank system 2
+  title: Elo-Ranking-Pairing-System
   description: side project
   contact:
     name: "damody"
