@@ -1,24 +1,26 @@
 get:
-  summary: show one restaurant information
+  summary: get one member comments
   tags:
-    - restaurants
+    - members
   parameters:
-    - name: restaurantId
-      in: query
+    - name: memberId
+      in: path
       required: true
-      description: The id of the restaurant to get information
+      description: The id of the member to get comments
       schema:
         type: integer
         format: int32
       example: 3
   responses:
     '200':
-      description: OK
+      description: |
+        Get member's comments  
+        得到該會員所有評論
       headers:
       content:
         application/json:    
           schema:
-            $ref: "/schemas/foods.yaml#FoodAll"
+            $ref: "/schemas/comments.yaml#CommentIDs"
     '500':
       description: unexpected error
       content:

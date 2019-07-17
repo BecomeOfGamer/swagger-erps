@@ -1,7 +1,7 @@
 post:
   summary: get one restaurant information
   tags:
-    - restaurants
+    - room
   requestBody:
     required: true
     content:

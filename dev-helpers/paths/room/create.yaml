@@ -1,7 +1,7 @@
 post:
   summary: List all restaurants
   tags:
-    - restaurants
+    - room
   parameters:
   requestBody:
     required: true
@@ -29,20 +29,6 @@ post:
               description: | 
                 Search point's Latitude  
                 搜尋中心的經度
-            lng:
-              type: number
-              format: float
-              example: 121.5
-              description: | 
-                Search point's Longitude  
-                搜尋中心的緯度
-            range:
-              type: number
-              format: float
-              example: 5000
-              description: | 
-                Search data of range (meter)  
-                搜尋範圍(公尺)
             like:
               type: integer
               format: int32
@@ -50,20 +36,6 @@ post:
               description: | 
                 at least like count, only for VIP  
                 讚數要大於等於的數量，VIP專用
-            dislike:
-              type: integer
-              format: int32
-              example: 3
-              description: | 
-                at least like count, only for VIP  
-                不喜歡數要小於的數量，VIP專用
-            stars:
-              type: integer
-              format: int32
-              example: 3
-              description: | 
-                at least like count, only for VIP  
-                星級要大於等於的數量，VIP專用
   responses:
     '200':
       description: |

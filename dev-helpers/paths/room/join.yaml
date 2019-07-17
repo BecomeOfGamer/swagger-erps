@@ -1,0 +1,27 @@
+post:
+  summary: show one restaurant information
+  tags:
+    - room
+  parameters:
+    - name: restaurantId
+      in: query
+      required: true
+      description: The id of the restaurant to get information
+      schema:
+        type: integer
+        format: int32
+      example: 3
+  responses:
+    '200':
+      description: OK
+      headers:
+      content:
+        application/json:    
+          schema:
+            $ref: "/schemas/foods.yaml#FoodAll"
+    '500':
+      description: unexpected error
+      content:
+        application/json:
+          schema:
+            $ref: "/schemas/common.yaml#Error"
