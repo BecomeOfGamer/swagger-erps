@@ -1,8 +1,0 @@
-Error:
-  required:
-    - error
-  properties:
-    error:
-      type: string
-      example: index out of range.
-      description: real error message in there.

@@ -1,5 +1,5 @@
 post:
-  summary: List all restaurants
+  summary: create room 創建新房間
   tags:
     - room
   parameters:
@@ -11,33 +11,16 @@ post:
           # Body schema with atomic property examples
           type: object
           required:
-            - name
-            - lat
-            - lng
-            - range
+            - userid
           properties:
-            name:
+            userid:
               type: string
-              example: '豪'
+              example: 'damody'
               description: |
-                keyword of restaurant name  
-                店名搜尋關鍵字
-            lat:
-              type: number
-              format: float
-              example: 25
-              description: | 
-                Search point's Latitude  
-                搜尋中心的經度
-            like:
-              type: integer
-              format: int32
-              example: 10
-              description: | 
-                at least like count, only for VIP  
-                讚數要大於等於的數量，VIP專用
+                user id
+                使用者代號
   responses:
-    '200':
+    'success':
       description: |
         All stores in the search range  
         搜尋範圍內所有餐廳
@@ -45,8 +28,8 @@ post:
       content:
         application/json:    
           schema:
-            $ref: "/schemas/restaurants.yaml#Restaurants"
-    '500':
+            $ref: "/schemas/common.yaml#Success"
+    'fail':
       description: unexpected error
       content:
         application/json:

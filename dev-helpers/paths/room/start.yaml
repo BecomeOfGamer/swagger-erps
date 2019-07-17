@@ -1,5 +1,5 @@
 post:
-  summary: 加入朋友的房間
+  summary: start room  開始遊戲
   tags:
     - room
   parameters:
@@ -21,7 +21,9 @@ post:
                 使用者代號
   responses:
     'success':
-      description: success
+      description: |
+        All stores in the search range  
+        搜尋範圍內所有餐廳
       headers:
       content:
         application/json:    

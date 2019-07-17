@@ -1,7 +1,7 @@
 post:
-  summary: 加入朋友的房間
+  summary: add likelist 加入友善名單
   tags:
-    - room
+    - filter
   parameters:
   requestBody:
     required: true
@@ -21,7 +21,9 @@ post:
                 使用者代號
   responses:
     'success':
-      description: success
+      description: |
+        All stores in the search range  
+        搜尋範圍內所有餐廳
       headers:
       content:
         application/json:    

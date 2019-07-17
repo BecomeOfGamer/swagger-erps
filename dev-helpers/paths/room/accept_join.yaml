@@ -1,5 +1,5 @@
 post:
-  summary: 加入朋友的房間
+  summary: accept join room 接受避請進入房間
   tags:
     - room
   parameters:
@@ -20,14 +20,11 @@ post:
                 user id
                 使用者代號
   responses:
-    'success':
-      description: success
+    '200':
+      description: |
+        Success
       headers:
-      content:
-        application/json:    
-          schema:
-            $ref: "/schemas/common.yaml#Success"
-    'fail':
+    '500':
       description: unexpected error
       content:
         application/json:

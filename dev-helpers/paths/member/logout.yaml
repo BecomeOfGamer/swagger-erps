@@ -1,7 +1,7 @@
 post:
-  summary: 加入朋友的房間
+  summary: logout member 登出
   tags:
-    - room
+    - member
   parameters:
   requestBody:
     required: true
@@ -20,14 +20,16 @@ post:
                 user id
                 使用者代號
   responses:
-    'success':
-      description: success
+    '200':
+      description: |
+        Get information for member  
+        得到會員所有資訊
       headers:
       content:
         application/json:    
           schema:
             $ref: "/schemas/common.yaml#Success"
-    'fail':
+    '500':
       description: unexpected error
       content:
         application/json:

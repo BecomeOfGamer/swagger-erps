@@ -1,5 +1,5 @@
 post:
-  summary: 加入朋友的房間
+  summary: invite room 邀請人加入房間
   tags:
     - room
   parameters:
@@ -20,14 +20,16 @@ post:
                 user id
                 使用者代號
   responses:
-    'success':
-      description: success
+    '200':
+      description: |
+        All stores in the search range  
+        搜尋範圍內所有餐廳
       headers:
       content:
         application/json:    
           schema:
             $ref: "/schemas/common.yaml#Success"
-    'fail':
+    '500':
       description: unexpected error
       content:
         application/json:

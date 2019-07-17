@@ -1,5 +1,5 @@
 post:
-  summary: 加入朋友的房間
+  summary: Start lining up to play games 開始排隊玩遊戲
   tags:
     - room
   parameters:
@@ -20,14 +20,11 @@ post:
                 user id
                 使用者代號
   responses:
-    'success':
-      description: success
+    '200':
+      description: |
+        Success
       headers:
-      content:
-        application/json:    
-          schema:
-            $ref: "/schemas/common.yaml#Success"
-    'fail':
+    '500':
       description: unexpected error
       content:
         application/json:
