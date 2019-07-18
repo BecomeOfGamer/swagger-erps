@@ -1,5 +1,9 @@
 # <img src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SWU-logo-clr.png" height="80">
 
+go https://killingspreeteam.github.io/swagger-erps/server.html
+
+to watch sequence diagram
+
 use 'yarn dev' to develop
 
 update file in 'dev-helpers'
