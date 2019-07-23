@@ -31,26 +31,26 @@ paths:
   /friend/<clientID>/remove_friend:
     $ref: /paths/friend/remove_friend.yaml
 
-  /room/<clientID>/accept_join:
-    $ref: /paths/room/accept_join.yaml
-  /room/<clientID>/cancel_queue:
-    $ref: /paths/room/cancel_queue.yaml
-  /room/<clientID>/close:
-    $ref: /paths/room/close.yaml
   /room/<clientID>/create:
     $ref: /paths/room/create.yaml
+  /room/<clientID>/close:
+    $ref: /paths/room/close.yaml
+  /room/<clientID>/start_queue:
+    $ref: /paths/room/start_queue.yaml
+  /room/<clientID>/cancel_queue:
+    $ref: /paths/room/cancel_queue.yaml
   /room/<clientID>/invite:
     $ref: /paths/room/invite.yaml
   /room/<clientID>/join:
     $ref: /paths/room/join.yaml
+  /room/<clientID>/accept_join:
+    $ref: /paths/room/accept_join.yaml
   /room/<clientID>/kick:
     $ref: /paths/room/kick.yaml
   /room/<clientID>/leave:
     $ref: /paths/room/leave.yaml
   /room/<clientID>/prestart:
     $ref: /paths/room/prestart.yaml
-  /room/<clientID>/start_queue:
-    $ref: /paths/room/start_queue.yaml
   /room/<clientID>/start:
     $ref: /paths/room/start.yaml
     
